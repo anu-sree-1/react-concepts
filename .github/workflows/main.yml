@@ -3,9 +3,6 @@ name: Deploy react-concepts to GitHub Pages
 on:
   push:
     branches: [main]
-    paths:
-    - use-layout-effect/**
-    - use-reducer/**
 
 permissions:
   contents: read
@@ -29,14 +26,21 @@ jobs:
       # use-layout-effect
       - name: npm i and build
         working-directory: use-layout-effect
-        run: | 
+        run: |
           npm i
           npm run build
 
       # use-reducer
       - name: npm i and build
         working-directory: use-reducer
-        run: | 
+        run: |
+          npm i
+          npm run build
+
+      # use-imperative-handle
+      - name: npm i and build
+        working-directory: use-imperative-handle
+        run: |
           npm i
           npm run build
 
