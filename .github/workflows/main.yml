@@ -3,6 +3,9 @@ name: Deploy react-concepts to GitHub Pages
 on:
   push:
     branches: [main]
+    paths:
+    - use-layout-effect/**
+    - use-reducer/**
 
 permissions:
   contents: read
