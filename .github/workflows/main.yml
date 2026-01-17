@@ -51,6 +51,13 @@ jobs:
           npm i
           npm run build
 
+      # tanstack
+      - name: npm i and build
+        working-directory: tanstack
+        run: |
+          npm i
+          npm run build
+
       - name: Prepare sites
         run: |
           mkdir site
