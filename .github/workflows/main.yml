@@ -58,6 +58,13 @@ jobs:
           npm i
           npm run build
 
+      # swr
+      - name: build - swr
+        working-directory: swr
+        run: |
+          npm i
+          npm run build
+
       - name: Prepare sites
         run: |
           mkdir site
@@ -65,6 +72,7 @@ jobs:
           mv use-reducer/dist site/use-reducer
           mv presentational-container-component/dist site/presentational-container-component
           mv tanstack/dist site/tanstack
+          mv swr/dist site/swr
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
