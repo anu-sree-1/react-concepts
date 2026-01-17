@@ -9,7 +9,6 @@ const App = () => {
   useLayoutEffect(() => {
     if (boxRef.current) {
       const rect = boxRef.current.getBoundingClientRect();
-
       setWidth(rect.width);
     }
   }, []);
