@@ -64,6 +64,7 @@ jobs:
           mv use-layout-effect/dist site/use-layout-effect
           mv use-reducer/dist site/use-reducer
           mv presentational-container-component/dist site/presentational-container-component
+          mv tanstack/dist site/tanstack
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
