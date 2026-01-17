@@ -24,35 +24,35 @@ jobs:
           node-version: 20
 
       # use-layout-effect
-      - name: npm i and build
+      - name: build - use-layout-effect
         working-directory: use-layout-effect
         run: |
           npm i
           npm run build
 
       # use-reducer
-      - name: npm i and build
+      - name: build - use-reducer
         working-directory: use-reducer
         run: |
           npm i
           npm run build
 
       # use-imperative-handle
-      - name: npm i and build
+      - name: build - use-imperative-handle
         working-directory: use-imperative-handle
         run: |
           npm i
           npm run build
 
       # presentational-container-component
-      - name: npm i and build
+      - name: build - presentational-container-component
         working-directory: presentational-container-component
         run: |
           npm i
           npm run build
 
       # tanstack
-      - name: npm i and build
+      - name: build - tanstack
         working-directory: tanstack
         run: |
           npm i

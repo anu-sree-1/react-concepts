@@ -43,7 +43,6 @@ export default function Container() {
             display: "flex",
             alignItems: "center",
             gap: "10px",
-            display: "flex",
             padding: 0,
           }}
         >
