@@ -44,9 +44,9 @@ jobs:
           npm i
           npm run build
 
-      # presentational-container-components
+      # presentational-container-component
       - name: npm i and build
-        working-directory: presentational-container-components
+        working-directory: presentational-container-component
         run: |
           npm i
           npm run build
@@ -56,7 +56,7 @@ jobs:
           mkdir site
           mv use-layout-effect/dist site/use-layout-effect
           mv use-reducer/dist site/use-reducer
-          mv presentational-container-components/dist site/presentational-container-components
+          mv presentational-container-component/dist site/presentational-container-component
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
