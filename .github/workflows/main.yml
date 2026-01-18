@@ -79,6 +79,13 @@ jobs:
           npm i
           npm run build
 
+      # emotion
+      - name: build emotion
+        working-directory: emotion
+        run: |
+          npm i
+          npm run build
+
       - name: Prepare sites
         run: |
           mkdir site
@@ -89,6 +96,7 @@ jobs:
           mv swr/dist site/swr
           mv react-window/dist site/react-window
           mv react-virtualized/dist site/react-virtualized
+          mv emotion/dist site/emotion-virtualized
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
