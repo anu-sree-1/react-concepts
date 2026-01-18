@@ -1,0 +1,38 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+@use "./functions" as *;
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #f8fafc;
+}
+
+/* Nesting */
+.app {
+  max-width: 600px;
+  margin: spacing(4) auto;
+  padding: spacing(3);
+
+  h1 {
+    margin-bottom: spacing(3);
+  }
+}
+
+/* Conditional logic */
+.status-box {
+  @include card;
+
+  @if $theme == light {
+    border: 2px solid #e5e7eb;
+  } @else {
+    border: 2px solid #111827;
+  }
+}
+
+/* Loops */
+@for $i from 1 through 3 {
+  .margin-#{$i} {
+    margin-top: $i * 8px;
+  }
+}

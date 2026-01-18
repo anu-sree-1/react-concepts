@@ -86,6 +86,14 @@ jobs:
           npm i
           npm run build
 
+      # sass-less
+      - name: build sass-less
+        working-directory: sass-less
+        run: |
+          npm i
+          npm run build
+
+
       - name: Prepare sites
         run: |
           mkdir site
@@ -96,7 +104,8 @@ jobs:
           mv swr/dist site/swr
           mv react-window/dist site/react-window
           mv react-virtualized/dist site/react-virtualized
-          mv emotion/dist site/emotion-virtualized
+          mv emotion/dist site/emotion
+          mv sass-less/dist site/sass-less
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

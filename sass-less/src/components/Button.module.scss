@@ -1,0 +1,24 @@
+@use "../styles/variables" as *;
+@use "../styles/mixins" as *;
+
+.button {
+  @include flex-center;
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  color: white;
+
+  &.primary {
+    background: $primary-color;
+  }
+
+  &.success {
+    background: $success-color;
+  }
+
+  &.error {
+    background: $error-color;
+  }
+}
