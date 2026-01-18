@@ -65,6 +65,13 @@ jobs:
           npm i
           npm run build
 
+      # react-window
+      - name: build - react-window
+        working-directory: react-window
+        run: |
+          npm i
+          npm run build
+
       - name: Prepare sites
         run: |
           mkdir site
@@ -73,6 +80,7 @@ jobs:
           mv presentational-container-component/dist site/presentational-container-component
           mv tanstack/dist site/tanstack
           mv swr/dist site/swr
+          mv react-window/dist site/react-window
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
