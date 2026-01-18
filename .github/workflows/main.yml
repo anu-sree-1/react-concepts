@@ -72,6 +72,13 @@ jobs:
           npm i
           npm run build
 
+      # react-virtualized
+      - name: build - react-virtualized
+        working-directory: react-virtualized
+        run: |
+          npm i
+          npm run build
+
       - name: Prepare sites
         run: |
           mkdir site
@@ -81,6 +88,7 @@ jobs:
           mv tanstack/dist site/tanstack
           mv swr/dist site/swr
           mv react-window/dist site/react-window
+          mv react-virtualized/dist site/react-virtualized
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
