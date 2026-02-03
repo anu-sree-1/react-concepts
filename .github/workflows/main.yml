@@ -45,22 +45,22 @@ jobs:
           npm run build
 
       # presentational-container-component
-      - name: build - presentational-container-component
-        working-directory: presentational-container-component
+      - name: build - 04-presentational-container-component
+        working-directory: 04-presentational-container-component
         run: |
           npm i
           npm run build
 
       # tanstack
-      - name: build - tanstack
-        working-directory: tanstack
+      - name: build - 05-tanstack
+        working-directory: 05-tanstack
         run: |
           npm i
           npm run build
 
       # swr
-      - name: build - swr
-        working-directory: swr
+      - name: build - 06-swr
+        working-directory: 06-swr
         run: |
           npm i
           npm run build
@@ -100,9 +100,9 @@ jobs:
           mv 01-use-layout-effect/dist site/01-use-layout-effect
           mv 02-use-reducer/dist site/02-use-reducer
           mv 03-use-imperative-handle/dist site/03-use-imperative-handle
-          mv presentational-container-component/dist site/presentational-container-component
-          mv tanstack/dist site/tanstack
-          mv swr/dist site/swr
+          mv 04-presentational-container-component/dist site/04-presentational-container-component
+          mv 05-tanstack/dist site/05-tanstack
+          mv 06-swr/dist site/06-swr
           mv react-window/dist site/react-window
           mv react-virtualized/dist site/react-virtualized
           mv emotion/dist site/emotion
