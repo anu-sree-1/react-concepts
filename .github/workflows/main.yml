@@ -24,22 +24,22 @@ jobs:
           node-version: 20
 
       # use-layout-effect
-      - name: build - use-layout-effect
-        working-directory: use-layout-effect
+      - name: build - 01-use-layout-effect
+        working-directory: 01-use-layout-effect
         run: |
           npm i
           npm run build
 
       # use-reducer
-      - name: build - use-reducer
-        working-directory: use-reducer
+      - name: build - 02-use-reducer
+        working-directory: 02-use-reducer
         run: |
           npm i
           npm run build
 
       # use-imperative-handle
-      - name: build - use-imperative-handle
-        working-directory: use-imperative-handle
+      - name: build - 03-use-imperative-handle
+        working-directory: 03-use-imperative-handle
         run: |
           npm i
           npm run build
@@ -97,8 +97,9 @@ jobs:
       - name: Prepare sites
         run: |
           mkdir site
-          mv use-layout-effect/dist site/use-layout-effect
-          mv use-reducer/dist site/use-reducer
+          mv 01-use-layout-effect/dist site/01-use-layout-effect
+          mv 02-use-reducer/dist site/02-use-reducer
+          mv 03-use-imperative-handle/dist site/03-use-imperative-handle
           mv presentational-container-component/dist site/presentational-container-component
           mv tanstack/dist site/tanstack
           mv swr/dist site/swr

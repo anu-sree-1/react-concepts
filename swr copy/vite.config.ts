@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base:'/react-concepts/03-use-imperative-handle/'
+  base:'/react-concepts/swr/'
 })

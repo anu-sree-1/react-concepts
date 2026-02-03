@@ -1,0 +1,221 @@
+/* app.css - Modern SWR Dashboard with Glassmorphism */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  padding: 2.5rem;
+  box-shadow: 
+    0 25px 50px rgba(0,0,0,0.25),
+    0 0 0 1px rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  max-width: 520px;
+  width: 100%;
+  color: white;
+}
+
+h3 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+span[style*="marginLeft"] {
+  font-size: 1.2rem;
+  animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+ul {
+  list-style: none;
+  margin-bottom: 2rem;
+  max-height: 320px;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+li {
+  background: rgba(255, 255, 255, 0.08);
+  margin-bottom: 12px;
+  padding: 1.1rem 1.5rem;
+  border-radius: 2px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 1.15rem;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+  width: 98%;
+}
+
+li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background: linear-gradient(135deg, #a8edea, #fed6e3);
+  border-radius: 2px 0 0 2px;
+}
+
+li:hover {
+  transform: translateX(6px) scale(1.02);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  border-color: rgba(255,255,255,0.2);
+}
+
+.spinner {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+input {
+  width: 100%;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(15px);
+  color: white;
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+  border: 1px solid rgba(255,255,255,0.15);
+  transition: all 0.3s ease;
+}
+
+input::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 0 3px rgba(168, 237, 234, 0.3);
+  transform: scale(1.02);
+}
+
+button {
+  width: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  padding: 16px 28px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: white;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    0 10px 30px rgba(102, 126, 234, 0.4),
+    0 4px 15px rgba(0,0,0,0.1);
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  transition: left 0.6s;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 
+    0 20px 45px rgba(102, 126, 234, 0.5),
+    0 8px 25px rgba(0,0,0,0.15);
+}
+
+button:hover::before {
+  left: 100%;
+}
+
+button:active {
+  transform: translateY(-1px);
+}
+
+/* Loading & Error States */
+p {
+  text-align: center;
+  font-size: 1.25rem;
+  padding: 3rem 2rem;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Custom Scrollbar */
+ul::-webkit-scrollbar {
+  width: 6px;
+}
+
+ul::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.05);
+  border-radius: 10px;
+}
+
+ul::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.2);
+  border-radius: 10px;
+}
+
+ul::-webkit-scrollbar-thumb:hover {
+  background: rgba(255,255,255,0.35);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  body { padding: 1rem; }
+  div { padding: 2rem 1.5rem; margin: 0 10px; }
+  h3 { font-size: 1.6rem; }
+  input, button { font-size: 1rem; }
+}
