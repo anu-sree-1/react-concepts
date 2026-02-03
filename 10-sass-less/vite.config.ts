@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base:'/react-concepts/react-window/'
+  base:'/react-concepts/10-sass-less/'
 })

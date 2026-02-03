@@ -66,29 +66,29 @@ jobs:
           npm run build
 
       # react-window
-      - name: build - react-window
-        working-directory: react-window
+      - name: build - 07-react-window
+        working-directory: 07-react-window
         run: |
           npm i
           npm run build
 
       # react-virtualized
-      - name: build - react-virtualized
-        working-directory: react-virtualized
+      - name: build - 08-react-virtualized
+        working-directory: 08-react-virtualized
         run: |
           npm i
           npm run build
 
       # emotion
-      - name: build emotion
-        working-directory: emotion
+      - name: build 09-emotion
+        working-directory: 09-emotion
         run: |
           npm i
           npm run build
 
       # sass-less
-      - name: build sass-less
-        working-directory: sass-less
+      - name: build 10-sass-less
+        working-directory: 10-sass-less
         run: |
           npm i
           npm run build
@@ -103,10 +103,10 @@ jobs:
           mv 04-presentational-container-component/dist site/04-presentational-container-component
           mv 05-tanstack/dist site/05-tanstack
           mv 06-swr/dist site/06-swr
-          mv react-window/dist site/react-window
-          mv react-virtualized/dist site/react-virtualized
-          mv emotion/dist site/emotion
-          mv sass-less/dist site/sass-less
+          mv 07-react-window/dist site/07-react-window
+          mv 08-react-virtualized/dist site/08-react-virtualized
+          mv 09-emotion/dist site/09-emotion
+          mv 10-sass-less/dist site/10-sass-less
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

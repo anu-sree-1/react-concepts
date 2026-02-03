@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base:'/react-concepts/react-virtualized/'
+  base:'/react-concepts/07-react-window/'
 })

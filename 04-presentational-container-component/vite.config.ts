@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base:'/react-concepts/presentational-container-component/'
+  base:'/react-concepts/04-presentational-container-component/'
 })
